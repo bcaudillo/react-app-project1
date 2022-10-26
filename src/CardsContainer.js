@@ -11,13 +11,8 @@ function CardsContainer(){
         setCards(cardsObj); 
         })
     },[]);
-    function handleNewCards(newCards){
-        const updatedCards = [...cards, newCards];
-        setCards(updatedCards)
-    }
+   
 
-
-    console.log(cards)
     return (
         <CardsList cards={cards}/>
     )
