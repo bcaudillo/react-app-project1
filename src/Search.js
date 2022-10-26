@@ -1,7 +1,8 @@
 import React,{useState} from  "react";
 
-function Search(){
-    const [searchTerm, setSearchTerm] = useState("");
+function Search({onSearch}){
+    const [searchTerm, setSearchTerm]=useState("")
+    
     
     function handleSubmit(event){
         event.preventDefault();
@@ -13,7 +14,7 @@ function Search(){
                 type="text"
                 id="search"
                 placeholder="search for card"
-                value={search}
+                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
             <button type="submit">🔍</button>
