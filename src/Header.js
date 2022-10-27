@@ -1,11 +1,11 @@
 import React from "react";
-import Search from "./Search";
+import CardsContainer from "./CardsContainer";
 
-function Header({onSearch}){
+function Header(){
     return(
         <header>
             <h1>Tarot Encyclopedia</h1>
-            <Search onSearch={onSearch}/>
+            <CardsContainer />
 
         </header>
     )

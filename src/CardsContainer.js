@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import CardsList from "./CardsList"
+import CardsList from "./CardsList";
+import Search from './Search';
 
 function CardsContainer(){
-    const [cards, setCards] =useState([])
+    const [cards, setCards]=useState([])
+    const [searchTerm, setSearchTerm] = useState("");
     useEffect(()=>{
         fetch("http://localhost:3000/cards")
         //run json server, local host instead
@@ -11,10 +13,13 @@ function CardsContainer(){
         setCards(cardsObj); 
         })
     },[]);
-   
+    const cardsToDisplay = cards.filter((card)=>card.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
     return (
-        <CardsList cards={cards}/>
+        <div>
+            <Search searchTerm={searchTerm} onChangeSearch={setSearchTerm}/>
+            <CardsList cards={cardsToDisplay}/>
+        </div>
     )
     }
 export default CardsContainer; 
