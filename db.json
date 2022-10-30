@@ -913,6 +913,13 @@
     "meaning_rev": "Advantage, profit, success, favour, but none of these are permanent; also power and authority.",
     "desc": "A prostrate figure, pierced by all the swords belonging to the card."
     }
+    ],
+    "spreads":[
+        {
+            "id":1,
+            "name": "Advice from the Universe",
+            "number_of_cards": 3      
+        }
     ]
 }
 
