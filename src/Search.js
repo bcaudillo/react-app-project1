@@ -15,7 +15,7 @@ function Search({searchTerm,onChangeSearch}){
                 value={searchTerm}
                 onChange={(event)=>{handleChange(event)}}
             />
-            <button type="submit">🔍</button>
+            <button type="submit">search</button>
         </form>
     )
 }

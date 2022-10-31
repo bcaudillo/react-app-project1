@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import NavBar from './NavBar';
 import Header from './Header';
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
 
     <div className="App">
         <Header />
-        <NavBar />
      
     </div>
   )
