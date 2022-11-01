@@ -1,4 +1,3 @@
-import { clear } from "@testing-library/user-event/dist/clear";
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
@@ -18,6 +17,7 @@ function CardForm({onAddCard}) {
   }
 
   function handleSubmit() {
+    window.location.reload(false)
     const newCard = {
       id: formData.id,
       name: formData.name,
@@ -38,17 +38,9 @@ function CardForm({onAddCard}) {
 
   return (
     <div>
-      <h3>Create your own card</h3>
+      <h3>Add a tarot spread</h3>
       <Form onSubmit={handleSubmit}>
         <Form.Group widths="equal">
-        <Form.Input
-            fluid
-            label="id"
-            placeholder="enter value greater than 78"
-            name="id"
-            value={formData.id}
-            onChange={handleChange}
-          />
           <Form.Input
             fluid
             label="name"

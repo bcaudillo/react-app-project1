@@ -915,52 +915,10 @@
       "desc": "A prostrate figure, pierced by all the swords belonging to the card."
     },
     {
-      "id": "324",
-      "name": "",
-      "number_of_cards": "",
-      "spread_meaning": ""
-    },
-    {
-      "id": "2442",
-      "name": "",
-      "number_of_cards": "",
-      "spread_meaning": ""
-    },
-    {
-      "id": "987",
-      "name": "sdf",
-      "number_of_cards": "sdfa",
-      "spread_meaning": ""
-    },
-    {
-      "id": "452",
-      "name": "asfasf",
-      "number_of_cards": "dsafdsfaga",
-      "spread_meaning": ""
-    },
-    {
-      "id": "oHsIoRP",
-      "name": "",
-      "number_of_cards": "",
-      "spread_meaning": ""
-    },
-    {
-      "id": "235",
-      "name": "sdg",
-      "number_of_cards": "egdgda",
-      "spread_meaning": ""
-    },
-    {
-      "id": "2325",
-      "name": "sdf",
-      "number_of_cards": "768",
-      "spread_meaning": "dasfaf"
-    },
-    {
-      "id": "sdf",
-      "name": "sdf",
-      "number_of_cards": "sadg",
-      "spread_meaning": "3sadf"
+      "id": 79,
+      "name": "Asset & Hindrance",
+      "number_of_cards": "2",
+      "spread_meaning": "1. Asset 2. Hindrance"
     }
   ]
 }
