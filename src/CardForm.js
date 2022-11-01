@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
 function CardForm({onAddCard}) {
+  
   const [formData, setFormData] = useState({
     id: "",
     name: "",
@@ -16,15 +17,15 @@ function CardForm({onAddCard}) {
     });
   }
 
-  function handleSubmit() {
-    window.location.reload(false)
+  function handleSubmit(e) {
+    e.preventDefault();
+    
     const newCard = {
       id: formData.id,
       name: formData.name,
       number_of_cards: formData.number_of_cards,
-      spread_meaning: formData.spread_meaning,
+      spread_meaning: formData.spread_meaning
     };
-
     fetch("http://localhost:3000/cards", {
       method: "POST",
       headers: {
@@ -34,6 +35,12 @@ function CardForm({onAddCard}) {
     })
       .then((r) => r.json())
       .then(onAddCard);
+      setFormData({
+        id: "",
+        name: "",
+        number_of_cards: "",
+        spread_meaning: "",
+      })
   }
 
   return (

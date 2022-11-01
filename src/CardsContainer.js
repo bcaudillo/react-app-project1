@@ -20,11 +20,17 @@ function CardsContainer(){
     function handleAddCard(newCard) {
         setCards([...cards, newCard]);
       }
+  
     return (
         <div>
-            <CardForm onAddCard={handleAddCard}/>
-            <Search searchTerm={searchTerm} onChangeSearch={setSearchTerm}/>
-            <CardsList cards={cardsToDisplay}/>
+            
+                    <CardForm onAddCard={handleAddCard}/>
+                
+                    <Search searchTerm={searchTerm} onChangeSearch={setSearchTerm}/>
+                
+                    <CardsList cards={cardsToDisplay} />
+               
+
         </div>
     )
     }

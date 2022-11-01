@@ -24,9 +24,6 @@ root.render(
     <Route path="/list">
       <CardsList/>
     </Route>
-    <Route path="*">
-      404 Page not found
-    </Route>
   </BrowserRouter>,
   document.getElementById("root")
 );
