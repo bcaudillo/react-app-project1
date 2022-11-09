@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { Form } from "semantic-ui-react";
 
-function CardForm({onAddCard}) {
+function CardForm({handleAddCard}) {
+  const blankState ={
+      id: "",
+      name: "",
+      number_of_cards: "",
+      spread_meaning: "",
+    }
   
-  const [formData, setFormData] = useState({
-    id: "",
-    name: "",
-    number_of_cards: "",
-    spread_meaning: "",
-  });
-
+  const [formData, setFormData] = useState(blankState);
+  
   function handleChange(event) {
     setFormData({
       ...formData,
@@ -18,31 +19,20 @@ function CardForm({onAddCard}) {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
-    
-    const newCard = {
-      id: formData.id,
-      name: formData.name,
-      number_of_cards: formData.number_of_cards,
-      spread_meaning: formData.spread_meaning
-    };
-    fetch("http://localhost:3000/cards", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newCard),
-    })
-      .then((r) => r.json())
-      .then(onAddCard);
-      setFormData({
-        id: "",
-        name: "",
-        number_of_cards: "",
-        spread_meaning: "",
-      })
+      e.preventDefault();
+      const configObj={
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+      fetch("http://localhost:3000/spread",configObj )
+        .then((r) => r.json())
+        .then((data)=>handleAddCard(data));
+        setFormData(blankState)
   }
-
+    
   return (
     <div>
       <h3>Add a tarot spread</h3>
