@@ -12,7 +12,7 @@ function App() {
   const [spread,setSpread]=useState([])
     
     useEffect(()=>{
-        fetch("http://localhost:3000/cards")
+        fetch(`${process.env.REACT_APP_API_URL}/cards`)
         //run json server, local host instead
         .then(r=>r.json())
         .then((cardsArray)=>{
