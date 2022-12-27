@@ -1,0 +1,4 @@
+# Redirects from what the browser requests to what we serve
+/home              /
+/tarotcards  /about
+/spread              https://timely-pavlova-4e2144.netlify.app
